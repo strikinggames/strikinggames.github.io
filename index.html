@@ -2,357 +2,118 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meteor Strike | Download on Google Play</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meteor Strike | Play Web Demo</title>
     <meta
       name="description"
-      content="Meteor Strike by Striking Games is a fast arcade meteor-tapping game for Android. Download it now on Google Play."
+      content="Play the Meteor Strike web demo in your browser, then download the full game on Google Play."
     />
-    <meta
-      property="og:title"
-      content="Meteor Strike | Download on Google Play"
-    />
-    <meta
-      property="og:description"
-      content="Dive into a blazing arcade storm from Striking Games and download Meteor Strike on Google Play."
-    />
-    <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://play.google.com" />
+    <meta name="theme-color" content="#08121c" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="hero">
-        <nav class="topbar" aria-label="Primary">
-          <a class="studio-mark" href="#top" aria-label="Meteor Strike home">
+    <main class="page">
+      <section class="hero">
+        <section class="hero-copy" aria-label="Meteor Strike by Striking Games">
+          <header class="brand">
+            <div class="brand__studio">
+              <img
+                class="brand__mark"
+                src="assets/logo_meteor_strike_mark.png"
+                alt=""
+              />
+              <span>Striking Games</span>
+            </div>
+
             <img
-              class="studio-mark__icon"
-              src="assets/logo_meteor_strike_mark.png"
-              alt="Meteor Strike icon"
+              class="brand__logo"
+              src="assets/logo_meteor_strike.png"
+              alt="Meteor Strike"
             />
-            <span class="studio-mark__text">
-              <strong>Striking Games</strong>
-              <span>Arcade Mobile Studio</span>
-            </span>
-          </a>
-          <div class="topbar__actions">
+          </header>
+
+          <p class="hero-copy__lead">
+            Play the web demo instantly, then download the full game on Google Play.
+          </p>
+
+          <nav class="action-dock" aria-label="Primary actions">
             <a
-              class="topbar__link"
+              class="cta cta--primary"
               href="https://play.google.com/store/apps/details?id=com.strikinggames.meteorstrike"
               target="_blank"
               rel="noreferrer"
             >
-              Google Play
+              Download on Google Play
             </a>
             <a
-              class="topbar__link topbar__link--soft"
+              class="cta cta--secondary"
               href="https://strikinggames.github.io/meteor-strike-privacy/"
               target="_blank"
               rel="noreferrer"
             >
               Privacy Policy
             </a>
-          </div>
-        </nav>
+          </nav>
+        </section>
 
-        <section class="hero__content" id="top">
-          <div class="hero-copy">
-            <p class="eyebrow">STRIKING GAMES PRESENTS</p>
-            <img
-              class="hero-copy__logo"
-              src="assets/logo_meteor_strike.png"
-              alt="Meteor Strike by Striking Games"
-            />
-            <h1 class="sr-only">Meteor Strike</h1>
-            <p class="hero-copy__tagline">Arcade survival in the blast lane.</p>
-            <p class="hero-copy__lede">
-              Enter a blazing portrait arcade run where every second matters.
-              Tap meteors, dodge penalties, chase score streaks, and survive the
-              storm on Android.
-            </p>
-            <div class="hero-copy__actions">
-              <a
-                class="button button--primary"
-                href="https://play.google.com/store/apps/details?id=com.strikinggames.meteorstrike"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Download on Google Play
-              </a>
-              <a
-                class="button button--ghost"
-                href="https://strikinggames.github.io/meteor-strike-privacy/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Privacy Policy
-              </a>
-              <a class="button button--text" href="#features">See Features</a>
-            </div>
-            <ul class="hero-copy__meta" aria-label="Game highlights">
-              <li>Fast portrait sessions</li>
-              <li>Neon sci-fi arcade feel</li>
-              <li>Leaderboard-ready score chasing</li>
-            </ul>
-          </div>
+        <section class="play-area" aria-label="Meteor Strike web demo">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <div class="game-shell" data-game-root>
+                <canvas
+                  class="game-canvas"
+                  data-game-canvas
+                  width="540"
+                  height="1170"
+                  aria-label="Playable Meteor Strike web demo"
+                ></canvas>
 
-          <div class="hero-art">
-            <div class="phone-frame">
-              <div class="phone-frame__screen">
-                <div class="game-shell" data-game-root>
-                  <canvas
-                    class="game-canvas"
-                    data-game-canvas
-                    width="540"
-                    height="1170"
-                  ></canvas>
-
-                  <div class="game-ui">
-                    <div class="game-hud">
-                      <div class="game-badges">
-                        <div class="game-badge">
-                          <span>Score</span>
-                          <strong data-game-score>0</strong>
-                        </div>
-                        <div class="game-badge">
-                          <span>Best</span>
-                          <strong data-game-best>0</strong>
-                        </div>
-                      </div>
-
-                      <div
-                        class="game-hearts"
-                        data-game-hearts
-                        aria-label="Lives remaining"
-                      >
-                        <img
-                          class="game-heart"
-                          src="assets/icon_heart.png"
-                          alt=""
-                        />
-                        <img
-                          class="game-heart"
-                          src="assets/icon_heart.png"
-                          alt=""
-                        />
-                        <img
-                          class="game-heart"
-                          src="assets/icon_heart.png"
-                          alt=""
-                        />
-                      </div>
+                <div class="game-ui">
+                  <div class="hud-row">
+                    <div class="hud-chip">
+                      <span class="hud-label">Score</span>
+                      <strong data-game-score>0</strong>
                     </div>
 
-                    <div class="game-tip" data-game-tip>
-                      Hold and drag across meteors
+                    <div class="hud-lives" aria-label="Lives remaining">
+                      <img class="game-heart" src="assets/icon_heart.png" alt="" />
+                      <img class="game-heart" src="assets/icon_heart.png" alt="" />
+                      <img class="game-heart" src="assets/icon_heart.png" alt="" />
                     </div>
 
-                    <div class="game-overlay" data-game-menu>
-                      <img
-                        class="game-overlay__logo"
-                        src="assets/logo_meteor_strike.png"
-                        alt="Meteor Strike"
-                      />
-                      <p class="game-overlay__eyebrow">LIVE DEMO</p>
-                      <h2>Loading the game.</h2>
-                      <p class="game-overlay__text">
-                        Meteor Strike will start automatically as soon as the
-                        playable web demo finishes loading.
-                      </p>
-                      <button
-                        class="game-button"
-                        data-game-start
-                        type="button"
-                      >
-                        Start Run
-                      </button>
+                    <div class="hud-chip">
+                      <span class="hud-label">Best</span>
+                      <strong data-game-best>0</strong>
                     </div>
+                  </div>
 
-                    <div class="game-overlay" data-game-over hidden>
-                      <p class="game-overlay__eyebrow">GAME OVER</p>
-                      <h2 data-game-final-score>Final Score 0</h2>
-                      <p class="game-overlay__text" data-game-best-line>
-                        Best 0
-                      </p>
-                      <button
-                        class="game-button"
-                        data-game-retry
-                        type="button"
-                      >
-                        Play Again
-                      </button>
+                  <div class="game-tip" data-game-tip>Hold and drag across meteors</div>
+
+                  <div class="game-overlay" data-game-menu>
+                    <div class="overlay-card">
+                      <p class="overlay-kicker">Loading Demo</p>
+                      <h1 class="overlay-title">Meteor Strike</h1>
+                      <p class="overlay-copy">Play in the browser, then grab the full version below.</p>
+                      <button class="game-button" data-game-start type="button">Loading...</button>
+                    </div>
+                  </div>
+
+                  <div class="game-overlay" data-game-over hidden>
+                    <div class="overlay-card">
+                      <p class="overlay-kicker">Run Over</p>
+                      <p class="overlay-score" data-game-final-score>Final Score 0</p>
+                      <p class="overlay-best" data-game-best-line>Best 0</p>
+                      <button class="game-button" data-game-retry type="button">Play Again</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="orb orb--large"></div>
-            <div class="orb orb--small"></div>
-            <div class="streak streak--one"></div>
-            <div class="streak streak--two"></div>
-            <div class="streak streak--three"></div>
           </div>
         </section>
-      </header>
+      </section>
+    </main>
 
-      <main>
-        <section class="stats-band" aria-label="Game value points">
-          <article>
-            <strong>Arcade speed</strong>
-            <span>Designed for quick one-hand sessions and instant replays.</span>
-          </article>
-          <article>
-            <strong>Score pressure</strong>
-            <span>Golden, black, and splitting meteors keep every run volatile.</span>
-          </article>
-          <article>
-            <strong>Play Store ready</strong>
-            <span>Install Meteor Strike on Android directly from Google Play.</span>
-          </article>
-        </section>
-
-        <section class="features" id="features">
-          <div class="section-heading">
-            <p class="eyebrow">WHY PLAY</p>
-            <h2>A meteor storm built for reflexes.</h2>
-            <p>
-              Meteor Strike keeps the screen clean and the pressure high. It is
-              all about fast reads, satisfying taps, and pushing your best run
-              further than the last one.
-            </p>
-          </div>
-
-          <div class="feature-grid">
-            <article class="feature-card">
-              <img
-                class="feature-card__meteor"
-                src="assets/meteor_normal.png"
-                alt=""
-              />
-              <span class="feature-card__index">01</span>
-              <h3>Immediate arcade flow</h3>
-              <p>
-                Drop in fast, clear meteors, build streaks, and restart in
-                seconds when the storm wins.
-              </p>
-            </article>
-
-            <article class="feature-card">
-              <img
-                class="feature-card__meteor"
-                src="assets/meteor_golden.png"
-                alt=""
-              />
-              <span class="feature-card__index">02</span>
-              <h3>High-risk meteor variants</h3>
-              <p>
-                Hunt valuable golden drops, avoid life-draining black meteors,
-                and react to splitting threats before they flood the lanes.
-              </p>
-            </article>
-
-            <article class="feature-card">
-              <img
-                class="feature-card__meteor"
-                src="assets/meteor_black.png"
-                alt=""
-              />
-              <span class="feature-card__index">03</span>
-              <h3>Built by Striking Games</h3>
-              <p>
-                Crafted as a focused mobile score-attack experience with crisp
-                presentation and a direct Google Play download path.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="spotlight">
-          <div class="spotlight__copy">
-            <p class="eyebrow">ANDROID RELEASE</p>
-            <h2>Tap in. Hold your nerve. Climb the score.</h2>
-            <p>
-              If you want a sharp, replayable arcade game that feels built for
-              short bursts and score chasing, Meteor Strike is ready on Google
-              Play.
-            </p>
-          </div>
-
-          <div class="quote-card">
-            <p class="quote-card__line">
-              “Meteor Strike delivers compact arcade tension with a bright,
-              high-impact mobile look.”
-            </p>
-            <p class="quote-card__source">Striking Games</p>
-          </div>
-        </section>
-
-        <section class="cta-panel">
-          <div class="cta-panel__copy">
-            <p class="eyebrow">DOWNLOAD NOW</p>
-            <h2>Get Meteor Strike on Google Play.</h2>
-            <p>
-              Built by <strong>Striking Games</strong> for Android players who
-              want fast action and instant retries.
-            </p>
-          </div>
-
-          <div class="cta-panel__actions">
-            <a
-              class="button button--primary button--large"
-              href="https://play.google.com/store/apps/details?id=com.strikinggames.meteorstrike"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open Play Store Listing
-            </a>
-            <a
-              class="button button--ghost button--large"
-              href="https://strikinggames.github.io/meteor-strike-privacy/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Read Privacy Policy
-            </a>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <p>Meteor Strike by Striking Games</p>
-        <p>
-          Available on Google Play for Android devices.
-          <a
-            class="footer__link"
-            href="https://strikinggames.github.io/meteor-strike-privacy/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Privacy Policy
-          </a>
-        </p>
-      </footer>
-    </div>
-
-    <div class="mobile-action-bar" aria-label="Primary mobile actions">
-      <a
-        class="mobile-action-bar__button mobile-action-bar__button--primary"
-        href="https://play.google.com/store/apps/details?id=com.strikinggames.meteorstrike"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Download Game
-      </a>
-      <a
-        class="mobile-action-bar__button mobile-action-bar__button--ghost"
-        href="https://strikinggames.github.io/meteor-strike-privacy/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Privacy Policy
-      </a>
-    </div>
     <script src="demo.js"></script>
   </body>
 </html>
