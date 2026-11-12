@@ -3,116 +3,174 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Meteor Strike | Play Web Demo</title>
+    <title>Striking Games | Hailspire, coming soon</title>
     <meta
       name="description"
-      content="Play the Meteor Strike web demo in your browser, then download the full game on Google Play."
+      content="Hailspire, a 360° turret shooter from Striking Games, is coming soon to Google Play. Hold the last tower against the Harvest."
     />
     <meta name="theme-color" content="#08121c" />
+    <meta property="og:title" content="Hailspire: coming soon to Google Play" />
+    <meta property="og:description" content="Hold the last tower against the Harvest. A 360° turret shooter from Striking Games." />
+    <meta property="og:image" content="https://strikinggames.github.io/assets/hailspire_og.jpg" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href="assets/hailspire_icon.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="page">
-      <section class="hero">
-        <section class="hero-copy" aria-label="Meteor Strike by Striking Games">
-          <header class="brand">
-            <div class="brand__studio">
-              <img
-                class="brand__mark"
-                src="assets/logo_meteor_strike_mark.png"
-                alt=""
-              />
-              <span>Striking Games</span>
-            </div>
+    <header class="studio-bar">
+      <div class="studio-bar__inner">
+        <span class="studio-bar__name">Striking Games</span>
+        <nav class="studio-bar__nav" aria-label="Games">
+          <a href="#hailspire">Hailspire</a>
+          <a href="#meteor-strike">Meteor Strike</a>
+        </nav>
+      </div>
+    </header>
 
-            <img
-              class="brand__logo"
-              src="assets/logo_meteor_strike.png"
-              alt="Meteor Strike"
-            />
-          </header>
+    <section class="hs-hero" id="hailspire" aria-label="Hailspire, coming soon">
+      <div class="hs-hero__inner">
+        <img class="hs-hero__logo" src="assets/hailspire_logo.png" alt="Hailspire" />
+        <p class="hs-hero__tagline"><span>Defend the tower.</span> <span>Hold the ground.</span></p>
+        <p class="hs-hero__lead">
+          The Harvest has come for the relay's crystals, and you are its last gunner. Turn the tower's gun through a
+          full 360°, take ships down through the scope, fight on foot as Ellen, and shut the Gateway for good.
+        </p>
+        <div class="hs-hero__actions">
+          <span class="hs-soon">
+            <img class="hs-soon__icon" src="assets/hailspire_icon.png" alt="" />
+            <span class="hs-soon__text"><small>Coming soon on</small>Google Play</span>
+          </span>
+          <a class="cta cta--secondary" href="https://strikinggames.github.io/hailspire-privacy/">Privacy Policy</a>
+        </div>
+      </div>
+    </section>
 
-          <p class="hero-copy__lead">
-            Play the web demo instantly, then download the full game on Google Play.
-          </p>
+    <main class="page page--stack">
+      <section class="hs-facts" aria-label="What is in Hailspire">
+        <div class="hs-fact"><strong>72</strong><span>campaign levels across six regions</span></div>
+        <div class="hs-fact"><strong>360°</strong><span>of sky to defend from one tower</span></div>
+        <div class="hs-fact"><strong>On foot</strong><span>Ellen's own fights on the ground</span></div>
+        <div class="hs-fact"><strong>Endless</strong><span>Sky and Ground modes, leaderboards</span></div>
+      </section>
 
-          <nav class="action-dock" aria-label="Primary actions">
-            <a
-              class="cta cta--primary"
-              href="https://play.google.com/store/apps/details?id=com.strikinggames.meteorstrike"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Download on Google Play
-            </a>
-            <a
-              class="cta cta--secondary"
-              href="https://strikinggames.github.io/meteor-strike-privacy/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Privacy Policy
-            </a>
-          </nav>
-        </section>
+      <section class="hs-shots" aria-label="Hailspire screenshots">
+        <figure class="hs-shot">
+          <img src="assets/hailspire_shot_1.jpg" alt="The tower's gun aiming at incoming ships under a golden sky" loading="lazy" />
+          <figcaption>Hold the last tower</figcaption>
+        </figure>
+        <figure class="hs-shot">
+          <img src="assets/hailspire_shot_2.jpg" alt="Three red crystals and blue lightning holding the Gateway's door open" loading="lazy" />
+          <figcaption>Break the warp lock</figcaption>
+        </figure>
+        <figure class="hs-shot">
+          <img src="assets/hailspire_shot_3.jpg" alt="The Dreadnought flying through a storm" loading="lazy" />
+          <figcaption>Bring down the Dreadnought</figcaption>
+        </figure>
+        <figure class="hs-shot">
+          <img src="assets/hailspire_shot_4.jpg" alt="Ellen on foot, facing creatures in a temple hall" loading="lazy" />
+          <figcaption>Fight on foot as Ellen</figcaption>
+        </figure>
+      </section>
 
-        <section class="play-area" aria-label="Meteor Strike web demo">
-          <div class="phone-frame">
-            <div class="phone-screen">
-              <div class="game-shell" data-game-root>
-                <canvas
-                  class="game-canvas"
-                  data-game-canvas
-                  width="540"
-                  height="1170"
-                  aria-label="Playable Meteor Strike web demo"
-                ></canvas>
+      <section class="also" id="meteor-strike" aria-label="Also from Striking Games">
+        <h2 class="also__title">Also from Striking Games</h2>
+        <section class="hero">
+          <section class="hero-copy" aria-label="Meteor Strike by Striking Games">
+            <header class="brand">
+              <div class="brand__studio">
+                <img class="brand__mark" src="assets/logo_meteor_strike_mark.png" alt="" />
+                <span>Out now</span>
+              </div>
+              <img class="brand__logo" src="assets/logo_meteor_strike.png" alt="Meteor Strike" />
+            </header>
 
-                <div class="game-ui">
-                  <div class="hud-row">
-                    <div class="hud-chip">
-                      <span class="hud-label">Score</span>
-                      <strong data-game-score>0</strong>
+            <p class="hero-copy__lead">
+              Play the web demo instantly, then download the full game on Google Play.
+            </p>
+
+            <nav class="action-dock" aria-label="Meteor Strike actions">
+              <a
+                class="cta cta--primary"
+                href="https://play.google.com/store/apps/details?id=com.strikinggames.meteorstrike"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Download on Google Play
+              </a>
+              <a
+                class="cta cta--secondary"
+                href="https://strikinggames.github.io/meteor-strike-privacy/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Privacy Policy
+              </a>
+            </nav>
+          </section>
+
+          <section class="play-area" aria-label="Meteor Strike web demo">
+            <div class="phone-frame">
+              <div class="phone-screen">
+                <div class="game-shell" data-game-root>
+                  <canvas
+                    class="game-canvas"
+                    data-game-canvas
+                    width="540"
+                    height="1170"
+                    aria-label="Playable Meteor Strike web demo"
+                  ></canvas>
+
+                  <div class="game-ui">
+                    <div class="hud-row">
+                      <div class="hud-chip">
+                        <span class="hud-label">Score</span>
+                        <strong data-game-score>0</strong>
+                      </div>
+
+                      <div class="hud-lives" aria-label="Lives remaining">
+                        <img class="game-heart" src="assets/icon_heart.png" alt="" />
+                        <img class="game-heart" src="assets/icon_heart.png" alt="" />
+                        <img class="game-heart" src="assets/icon_heart.png" alt="" />
+                      </div>
+
+                      <div class="hud-chip">
+                        <span class="hud-label">Best</span>
+                        <strong data-game-best>0</strong>
+                      </div>
                     </div>
 
-                    <div class="hud-lives" aria-label="Lives remaining">
-                      <img class="game-heart" src="assets/icon_heart.png" alt="" />
-                      <img class="game-heart" src="assets/icon_heart.png" alt="" />
-                      <img class="game-heart" src="assets/icon_heart.png" alt="" />
+                    <div class="game-tip" data-game-tip>Hold and drag across meteors</div>
+
+                    <div class="game-overlay" data-game-menu>
+                      <div class="overlay-card">
+                        <p class="overlay-kicker">Loading Demo</p>
+                        <h1 class="overlay-title">Meteor Strike</h1>
+                        <p class="overlay-copy">Play in the browser, then grab the full version below.</p>
+                        <button class="game-button" data-game-start type="button">Loading...</button>
+                      </div>
                     </div>
 
-                    <div class="hud-chip">
-                      <span class="hud-label">Best</span>
-                      <strong data-game-best>0</strong>
-                    </div>
-                  </div>
-
-                  <div class="game-tip" data-game-tip>Hold and drag across meteors</div>
-
-                  <div class="game-overlay" data-game-menu>
-                    <div class="overlay-card">
-                      <p class="overlay-kicker">Loading Demo</p>
-                      <h1 class="overlay-title">Meteor Strike</h1>
-                      <p class="overlay-copy">Play in the browser, then grab the full version below.</p>
-                      <button class="game-button" data-game-start type="button">Loading...</button>
-                    </div>
-                  </div>
-
-                  <div class="game-overlay" data-game-over hidden>
-                    <div class="overlay-card">
-                      <p class="overlay-kicker">Run Over</p>
-                      <p class="overlay-score" data-game-final-score>Final Score 0</p>
-                      <p class="overlay-best" data-game-best-line>Best 0</p>
-                      <button class="game-button" data-game-retry type="button">Play Again</button>
+                    <div class="game-overlay" data-game-over hidden>
+                      <div class="overlay-card">
+                        <p class="overlay-kicker">Run Over</p>
+                        <p class="overlay-score" data-game-final-score>Final Score 0</p>
+                        <p class="overlay-best" data-game-best-line>Best 0</p>
+                        <button class="game-button" data-game-retry type="button">Play Again</button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </section>
       </section>
     </main>
+
+    <footer class="studio-foot">
+      <span>© 2026 Striking Games</span>
+      <a href="mailto:strikinggamesunity@gmail.com">strikinggamesunity@gmail.com</a>
+    </footer>
 
     <script src="demo.js"></script>
   </body>

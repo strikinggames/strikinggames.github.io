@@ -507,3 +507,282 @@ img {
     font-size: 0.92rem;
   }
 }
+
+/* ---------- Hailspire, the studio's main game (coming soon) ---------- */
+
+:root {
+  --hs-cyan: #7fefff;
+  --hs-amber: #ffc04d;
+  --hs-night: #0b1424;
+}
+
+.studio-bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(6, 12, 22, 0.72);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.studio-bar__inner {
+  width: min(calc(100% - 32px), 1180px);
+  margin: 0 auto;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.studio-bar__name {
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.86rem;
+}
+
+.studio-bar__nav {
+  display: flex;
+  gap: 22px;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+}
+
+.studio-bar__nav a:hover,
+.studio-bar__nav a:focus-visible {
+  color: var(--text-main);
+}
+
+.hs-hero {
+  position: relative;
+  min-height: min(82vh, 760px);
+  display: flex;
+  align-items: flex-end;
+  background:
+    linear-gradient(180deg, rgba(6, 12, 22, 0.15) 0%, rgba(6, 12, 22, 0.25) 45%, rgba(8, 18, 28, 0.96) 100%),
+    linear-gradient(90deg, rgba(6, 12, 22, 0.78) 0%, rgba(6, 12, 22, 0.2) 60%, rgba(6, 12, 22, 0) 100%),
+    url("assets/hailspire_hero.jpg") center 40% / cover no-repeat;
+}
+
+.hs-hero__inner {
+  width: min(calc(100% - 32px), 1180px);
+  margin: 0 auto;
+  padding: 120px 0 56px;
+}
+
+.hs-hero__logo {
+  width: min(640px, 92%);
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.45));
+}
+
+.hs-hero__tagline {
+  margin: 18px 0 0;
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hs-amber);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.hs-hero__tagline span {
+  display: inline-block;
+}
+
+.hs-hero__lead {
+  max-width: 600px;
+  margin: 14px 0 0;
+  font-size: clamp(1rem, 1.6vw, 1.14rem);
+  line-height: 1.6;
+  color: var(--text-main);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hs-hero__actions {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.hs-soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px 10px 10px;
+  border-radius: 16px;
+  background: rgba(6, 12, 22, 0.82);
+  border: 1px solid rgba(127, 239, 255, 0.45);
+  box-shadow: 0 0 24px rgba(127, 239, 255, 0.18);
+}
+
+.hs-soon__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 11px;
+}
+
+.hs-soon__text {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 1.08rem;
+  line-height: 1.15;
+}
+
+.hs-soon__text small {
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--hs-cyan);
+}
+
+.page--stack {
+  display: block;
+  min-height: auto;
+  padding-top: 8px;
+}
+
+.hs-facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 8px 0 34px;
+}
+
+.hs-fact {
+  padding: 18px 18px 16px;
+  border-radius: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.hs-fact strong {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--hs-cyan);
+}
+
+.hs-fact span {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.92rem;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
+
+.hs-shots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.hs-shot {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--panel-strong);
+  border: 1px solid var(--line);
+}
+
+.hs-shot img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.hs-shot figcaption {
+  padding: 12px 16px 14px;
+  font-weight: 700;
+  font-size: 0.86rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.also {
+  margin-top: 72px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.also__title {
+  margin: 0 0 28px;
+  font-size: 0.86rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.studio-foot {
+  width: min(calc(100% - 32px), 1180px);
+  margin: 0 auto;
+  padding: 28px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.86rem;
+  color: var(--text-soft);
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 860px) {
+  .hs-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hs-shots {
+    grid-template-columns: 1fr;
+  }
+
+  .hs-hero__inner {
+    padding: 96px 0 40px;
+  }
+
+  .studio-bar__nav {
+    gap: 14px;
+    font-size: 0.84rem;
+  }
+
+  /* Meteor Strike is the second game here: its words before its demo, and its buttons stay in the section
+     instead of the fixed bar the page had when it was the only game. */
+  .page--stack {
+    padding-bottom: 24px;
+  }
+
+  .also .hero-copy {
+    order: 1;
+  }
+
+  .also .play-area {
+    order: 2;
+  }
+
+  .also .brand {
+    justify-items: center;
+  }
+
+  .also .phone-frame {
+    width: min(100%, 340px);
+  }
+
+  .also .action-dock {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 0;
+    border: 0;
+    background: none;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  .also .cta {
+    white-space: nowrap;
+  }
+}
